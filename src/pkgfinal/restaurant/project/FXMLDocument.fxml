@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="638.0" prefWidth="831.0" style="-fx-background-color: #4F4F4F;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pkgfinal.restaurant.project.FXMLDocumentController">
+    <children>
+      <Label fx:id="labelGameTitle" layoutX="27.0" layoutY="23.0" prefHeight="64.0" prefWidth="540.0" textFill="WHITE">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelDay" layoutX="570.0" layoutY="36.0" prefHeight="45.0" prefWidth="124.0" text="Day:" textFill="WHITE">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelListBackground" layoutX="17.0" layoutY="110.0" prefHeight="335.0" prefWidth="325.0" style="-fx-background-color: #e89feb;" />
+      <Label fx:id="labelProfitBackground" layoutX="19.0" layoutY="475.0" prefHeight="146.0" prefWidth="325.0" style="-fx-background-color: #aaeba0;" />
+      <ListView fx:id="listviewCustomers" layoutX="34.0" layoutY="132.0" onMouseClicked="#customerClick" prefHeight="292.0" prefWidth="289.0" />
+      <Line fx:id="lineProfit" endX="202.0" layoutX="130.0" layoutY="582.0" startX="-100.0" />
+      <Text fx:id="textCosts" layoutX="37.0" layoutY="506.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Costs:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Text fx:id="textRevenue" layoutX="37.0" layoutY="538.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Revenue:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Text fx:id="textTips" layoutX="37.0" layoutY="570.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tips:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Text fx:id="textProfit" layoutX="38.0" layoutY="608.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Profit:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <GridPane fx:id="gridpaneSubmitMeal" layoutX="243.0" layoutY="132.0" prefHeight="292.0" prefWidth="76.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+      </GridPane>
+      <ListView fx:id="listviewSubmitMeal" layoutX="248.0" layoutY="132.0" onMouseClicked="#submitClick" prefHeight="292.0" prefWidth="76.0" />
+      <Label fx:id="labelCosts" layoutX="114.0" layoutY="479.0" prefHeight="35.0" prefWidth="96.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelRevenue" layoutX="142.0" layoutY="511.0" prefHeight="35.0" prefWidth="96.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelTips" layoutX="94.0" layoutY="543.0" prefHeight="35.0" prefWidth="96.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelProfit" layoutX="101.0" layoutY="581.0" prefHeight="35.0" prefWidth="96.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Line fx:id="lineSeparate" endX="-100.0" endY="521.0" layoutX="466.0" layoutY="110.0" startX="-100.0" stroke="WHITE" strokeLineCap="BUTT" strokeLineJoin="BEVEL" strokeType="OUTSIDE" strokeWidth="2.0" />
+      <GridPane fx:id="gridpaneIngredients" layoutX="386.0" layoutY="135.0" prefHeight="311.0" prefWidth="419.0" >
+        
+      </GridPane>
+      <ListView fx:id="listviewAdded" layoutX="380.0" layoutY="478.0" prefHeight="146.0" prefWidth="169.0" />
+      <ListView fx:id="listviewRecipe" layoutX="650.0" layoutY="478.0" prefHeight="146.0" prefWidth="169.0" />
+      <Button fx:id="buttonRestart" layoutX="568.0" layoutY="509.0" mnemonicParsing="false" onAction="#mealRestart" style="-fx-background-color: #FF0000;" text="Restart">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Label fx:id="labelTime" alignment="CENTER" contentDisplay="CENTER" layoutX="575.0" layoutY="569.0" prefHeight="35.0" prefWidth="52.0" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
+      <Button fx:id="buttonCheat" layoutX="260.0" layoutY="447.0" mnemonicParsing="false" onAction="#cheat" text="Cheat" />
+      <Text fx:id="textTime" fill="WHITE" layoutX="580.0" layoutY="564.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Time:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Button fx:id="buttonStart" layoutX="735.0" layoutY="46.0" mnemonicParsing="false" onAction="#startGame" text="Start Game" />
+      <Label fx:id="labelCoverAll" layoutX="-1.0" prefHeight="638.0" prefWidth="831.0" style="-fx-background-color: #4f4f4f;" />
+      <Label fx:id="labelIngCover" layoutX="377.0" layoutY="105.0" prefHeight="543.0" prefWidth="446.0" style="-fx-background-color: #4f4f4f;" />
+      <Text fx:id="textHomeTitle" fill="#ff7ab8" layoutX="307.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BAKERY">
+         <font>
+            <Font name="HoboStd" size="64.0" />
+         </font>
+      </Text>
+      <Text fx:id="textNameEnter" fill="WHITE" layoutX="305.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please Enter Your Name:">
+         <font>
+            <Font name="High Tower Text" size="24.0" />
+         </font>
+      </Text>
+      <TextField fx:id="fieldNameEnter" layoutX="304.0" layoutY="148.0" prefHeight="25.0" prefWidth="187.0" />
+      <Text fx:id="textChooseLevel" fill="WHITE" layoutX="319.0" layoutY="226.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please Choose a Level:">
+         <font>
+            <Font name="High Tower Text" size="24.0" />
+         </font>
+      </Text>
+      <Button fx:id="buttonEasy" layoutX="281.0" layoutY="255.0" mnemonicParsing="false" onAction="#clickedEasy" prefHeight="45.0" prefWidth="76.0" style="-fx-background-color: #A2E3FC;" text="Easy" />
+      <Button fx:id="buttonMedium" layoutX="394.0" layoutY="255.0" mnemonicParsing="false" onAction="#clickedMedium" prefHeight="45.0" prefWidth="76.0" style="-fx-background-color: #A2E3FC;" text="Medium" />
+      <Button fx:id="buttonHard" layoutX="507.0" layoutY="255.0" mnemonicParsing="false" onAction="#clickedHard" prefHeight="45.0" prefWidth="76.0" style="-fx-background-color: #A2E3FC;" text="Hard" />
+      <Text fx:id="textChooseDay" fill="WHITE" layoutX="253.0" layoutY="349.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please Choose the Number of Days:">
+         <font>
+            <Font name="High Tower Text" size="24.0" />
+         </font>
+      </Text>
+      <Button fx:id="button1" layoutX="226.0" layoutY="379.0" mnemonicParsing="false" onAction="#clickedDay1" prefHeight="45.0" prefWidth="76.0" style="-fx-background-color: #EFA2FC;" text="1">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="button5" layoutX="341.0" layoutY="379.0" mnemonicParsing="false" onAction="#clickedDay5" prefHeight="45.0" prefWidth="76.0" style="-fx-background-color: #EFA2FC;" text="5">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="button10" layoutX="452.0" layoutY="379.0" mnemonicParsing="false" onAction="#clickedDay10" prefHeight="45.0" prefWidth="76.0" style="-fx-background-color: #EFA2FC;" text="10">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="buttonInfinite" layoutX="559.0" layoutY="379.0" mnemonicParsing="false" onAction="#clickedDayI" prefHeight="45.0" prefWidth="83.0" style="-fx-background-color: #EFA2FC;" text="Infinite">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="buttonSubmit" layoutX="510.0" layoutY="148.0" mnemonicParsing="false" onAction="#clickedSubmit" text="Submit" />
+    </children>
+</AnchorPane>
